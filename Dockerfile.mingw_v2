@@ -107,7 +107,7 @@ RUN tar xf libssh2-1.11.0.tar.bz2 && \
 
 ADD https://api.github.com/repos/aria2/aria2/git/refs/heads/master version.json
 RUN git clone https://github.com/aria2/aria2 && \
-    git clone https://github.com/qy527145/aria2_build && \
+    git clone https://github.com/1nker/aria2_build && \
     cd aria2 && \
     git apply ../aria2_build/0001-options-unlock-connection-per-server-limit.patch -v --ignore-space-change --ignore-whitespace  && \
     git apply ../aria2_build/0002-download-retry-on-slow-speed-and-reset.patch -v --ignore-space-change --ignore-whitespace  && \
