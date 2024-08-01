@@ -1,4 +1,4 @@
-name: Build Aria For Windows
+name: Build Aria For Windows v2
 
 on: workflow_dispatch
   
