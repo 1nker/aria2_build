@@ -109,8 +109,8 @@ ADD https://api.github.com/repos/aria2/aria2/git/refs/heads/master version.json
 RUN git clone https://github.com/aria2/aria2 && \
     git clone https://github.com/qy527145/aria2_build && \
     cd aria2 && \
-    git apply ../0001-options-unlock-connection-per-server-limit.patch -v --ignore-space-change --ignore-whitespace  && \
-    git apply ../0002-download-retry-on-slow-speed-and-reset.patch -v --ignore-space-change --ignore-whitespace  && \
-    git apply ../0003-option-add-option-to-retry-on-http-4xx.patch -v --ignore-space-change --ignore-whitespace  && \
+    git apply ../aria2_build/0001-options-unlock-connection-per-server-limit.patch -v --ignore-space-change --ignore-whitespace  && \
+    git apply ../aria2_build/0002-download-retry-on-slow-speed-and-reset.patch -v --ignore-space-change --ignore-whitespace  && \
+    git apply ../aria2_build/0003-option-add-option-to-retry-on-http-4xx.patch -v --ignore-space-change --ignore-whitespace  && \
     autoreconf -i && ./mingw-config && make && \
     $HOST-strip src/aria2c.exe
